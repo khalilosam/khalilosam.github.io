@@ -1,0 +1,276 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="headerGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="60%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0078D4"/>
+    </linearGradient>
+    <linearGradient id="azureBlueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0078D4"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+
+    <!-- Filters & Shadows -->
+    <filter id="cardShadow2" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#0F172A" flood-opacity="0.08"/>
+    </filter>
+    <filter id="boxShadow2" x="-2%" y="-2%" width="104%" height="106%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+
+    <!-- Marker definition for arrows -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0078D4" />
+    </marker>
+    <marker id="arrowhead-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#16A34A" />
+    </marker>
+    <marker id="arrowhead-db" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2563EB" />
+    </marker>
+  </defs>
+
+  <style>
+    .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .title { font-weight: 800; font-size: 22px; fill: #FFFFFF; }
+    .subtitle { font-weight: 500; font-size: 12px; fill: #94A3B8; }
+    .tier-header { font-weight: 700; font-size: 12px; fill: #0F172A; letter-spacing: 0.5px; }
+    .box-title { font-weight: 700; font-size: 13px; fill: #0F172A; }
+    .box-desc { font-weight: 400; font-size: 11px; fill: #475569; line-height: 1.45; }
+    .conn-label { font-weight: 600; font-size: 10px; fill: #0369A1; }
+  </style>
+
+  <!-- Background -->
+  <rect width="1600" height="1000" fill="#F8FAFC"/>
+
+  <!-- ================= TOP BANNER ================= -->
+  <rect x="30" y="20" width="1540" height="90" rx="10" fill="url(#headerGrad2)" filter="url(#boxShadow2)"/>
+  <text class="font-sans title" x="60" y="55">TELECOM NETWORK MANAGEMENT SYSTEM (NMS) — MICROSOFT AZURE</text>
+  <text class="font-sans subtitle" x="60" y="80">Production 3-Tier Enterprise Cloud Architecture | Fully Provisioned via Terraform IaC | Automated via CI/CD Pipelines | Private Connectivity</text>
+
+  <!-- Author Badge -->
+  <g transform="translate(1220, 32)">
+    <rect width="320" height="66" rx="8" fill="#1E293B" stroke="#0078D4" stroke-width="1.5"/>
+    <text class="font-sans" x="20" y="25" fill="#38BDF8" font-size="11" font-weight="700">ARCHITECTED &amp; DEPLOYED BY</text>
+    <text class="font-sans" x="20" y="44" fill="#FFFFFF" font-size="12" font-weight="700">Osama Khalil</text>
+    <text class="font-sans" x="20" y="58" fill="#94A3B8" font-size="10">Senior Engineer – DevOps | Ericsson India</text>
+  </g>
+
+  <!-- ================= AZURE CLOUD BOUNDARY ================= -->
+  <g transform="translate(30, 130)">
+    <!-- Cloud Box -->
+    <rect width="1540" height="840" rx="12" fill="#FFFFFF" stroke="#0078D4" stroke-width="2" filter="url(#cardShadow2)"/>
+    
+    <!-- Cloud Header Pill -->
+    <rect x="25" y="-14" width="310" height="28" rx="6" fill="#0078D4"/>
+    <text class="font-sans" x="38" y="5" fill="#FFFFFF" font-size="12" font-weight="700">MICROSOFT AZURE CLOUD SUBSCRIPTION</text>
+
+    <!-- ================= TIER 1: FRONTEND PRESENTATION ================= -->
+    <g transform="translate(30, 30)">
+      <rect width="360" height="780" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+      <rect x="0" y="0" width="360" height="36" rx="8" fill="#F1F5F9" stroke="#E2E8F0"/>
+      <text class="font-sans tier-header" x="18" y="23">1. PRESENTATION &amp; INGRESS TIER</text>
+
+      <!-- Users Box -->
+      <g transform="translate(20, 60)">
+        <rect width="320" height="110" rx="8" fill="#FFFFFF" stroke="#0284C7" stroke-width="2" filter="url(#boxShadow2)"/>
+        <text class="font-sans box-title" x="15" y="28">Telecom NOC Operations Users</text>
+        <text class="font-sans box-desc" x="15" y="48">Network Engineers, NOC Staff &amp; Administrators</text>
+        <text class="font-sans" x="15" y="70" fill="#0284C7" font-size="10.5" font-weight="600">• Browser Single Page App (HTTPS / 443)</text>
+        <text class="font-sans" x="15" y="88" fill="#0284C7" font-size="10.5" font-weight="600">• Real-time telecom alarm dashboards</text>
+      </g>
+
+      <!-- Arrow down to Storage Static Website -->
+      <path d="M 180 180 L 180 230" stroke="#0284C7" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)"/>
+      <text class="font-sans conn-label" x="190" y="208">TLS 1.3 / HTTPS (Port 443)</text>
+
+      <!-- Azure Storage Static Website Card -->
+      <g transform="translate(20, 240)">
+        <rect width="320" height="175" rx="8" fill="#FFFFFF" stroke="#0078D4" stroke-width="2" filter="url(#boxShadow2)"/>
+        <rect x="0" y="0" width="320" height="30" rx="8" fill="#0078D4"/>
+        <text class="font-sans" x="15" y="20" fill="#FFFFFF" font-weight="700" font-size="12">Azure Storage Static Website</text>
+        
+        <g transform="translate(15, 45)">
+          <text class="font-sans" x="0" y="15" font-size="11" font-weight="700" fill="#0F172A">Container: <tspan fill="#0078D4">$web</tspan></text>
+          <text class="font-sans box-desc" x="0" y="34">• Static Single Page Application (SPA)</text>
+          <text class="font-sans box-desc" x="0" y="52">• HTML5, CSS3, JavaScript UI bundle</text>
+          <text class="font-sans box-desc" x="0" y="70">• Low latency distribution for NOC clients</text>
+          <text class="font-sans box-desc" x="0" y="88">• Zero server management &amp; auto-scaling</text>
+          <text class="font-sans" x="0" y="110" fill="#059669" font-size="10.5" font-weight="600">✔ Automated deploy via CI/CD artifact sync</text>
+        </g>
+      </g>
+
+      <!-- Frontend IaC Spec Card -->
+      <g transform="translate(20, 445)">
+        <rect width="320" height="150" rx="8" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/>
+        <text class="font-sans" x="15" y="24" fill="#1E40AF" font-weight="700" font-size="11.5">IaC &amp; Security Highlights</text>
+        <text class="font-sans box-desc" x="15" y="46">• Resource: `azurerm_storage_account`</text>
+        <text class="font-sans box-desc" x="15" y="66">• Static website feature enabled in Terraform</text>
+        <text class="font-sans box-desc" x="15" y="86">• Enforce HTTPS-only traffic (`enable_https_traffic_only`)</text>
+        <text class="font-sans box-desc" x="15" y="106">• Encrypted at rest with Microsoft-managed keys</text>
+        <text class="font-sans box-desc" x="15" y="126">• CORS rules scoped to authorized endpoints</text>
+      </g>
+    </g>
+
+    <!-- ================= TIER 2 & 3: AZURE VIRTUAL NETWORK ================= -->
+    <g transform="translate(420, 30)">
+      <!-- VNet Boundary -->
+      <rect width="1090" height="780" rx="10" fill="#FFFFFF" stroke="#0078D4" stroke-width="2" stroke-dasharray="8,6"/>
+      <rect x="25" y="-12" width="380" height="24" rx="4" fill="#0078D4"/>
+      <text class="font-sans" x="35" y="4" fill="#FFFFFF" font-size="11" font-weight="700">AZURE VIRTUAL NETWORK (VNet) — CIDR: 10.0.0.0/16</text>
+
+      <!-- Subnet 1: Backend Application -->
+      <g transform="translate(25, 35)">
+        <rect width="510" height="540" rx="8" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5" stroke-dasharray="6,4"/>
+        <rect x="0" y="0" width="510" height="32" rx="8" fill="#E2E8F0"/>
+        <text class="font-sans" x="15" y="21" fill="#1E293B" font-weight="700" font-size="11.5">SUBNET: snet-backend-app (10.0.2.0/24) | NSG: nsg-backend</text>
+
+        <!-- Linux VM Host Card -->
+        <g transform="translate(20, 50)">
+          <rect width="470" height="465" rx="8" fill="#FFFFFF" stroke="#1E40AF" stroke-width="2" filter="url(#boxShadow2)"/>
+          <rect x="0" y="0" width="470" height="36" rx="8" fill="#1E40AF"/>
+          <text class="font-sans" x="18" y="23" fill="#FFFFFF" font-weight="700" font-size="12">Linux Virtual Machine (Enterprise RHEL / Ubuntu)</text>
+          <text class="font-sans" x="340" y="23" fill="#93C5FD" font-size="10.5" font-weight="600">IP: 10.0.2.10</text>
+
+          <!-- Component 1: Nginx -->
+          <g transform="translate(20, 55)">
+            <rect width="430" height="145" rx="6" fill="#F0FDF4" stroke="#16A34A" stroke-width="1.5"/>
+            <rect x="0" y="0" width="430" height="28" rx="6" fill="#16A34A"/>
+            <text class="font-sans" x="12" y="19" fill="#FFFFFF" font-weight="700" font-size="11">Nginx Web Server &amp; Reverse Proxy (Ports 80/443)</text>
+            
+            <g transform="translate(12, 40)">
+              <text class="font-sans box-desc" x="0" y="12">• Edge entry point for REST API requests from frontend</text>
+              <text class="font-sans box-desc" x="0" y="30">• SSL/TLS Termination &amp; hardened cipher suites</text>
+              <text class="font-sans box-desc" x="0" y="48">• HTTP rate-limiting, CORS handling &amp; Gzip compression</text>
+              <text class="font-sans box-desc" x="0" y="66">• High-performance proxy pass to FastAPI ASGI daemon</text>
+              <text class="font-sans box-desc" x="0" y="84">• Structured access &amp; error logs managed by systemd</text>
+            </g>
+          </g>
+
+          <!-- Flow Arrow Nginx to FastAPI -->
+          <path d="M 235 210 L 235 240" stroke="#16A34A" stroke-width="2.5" fill="none" marker-end="url(#arrowhead-green)"/>
+          <text class="font-sans" x="245" y="228" fill="#15803D" font-size="10" font-weight="700">Proxy Pass: localhost:8000</text>
+
+          <!-- Component 2: FastAPI -->
+          <g transform="translate(20, 250)">
+            <rect width="430" height="150" rx="6" fill="#F0F9FF" stroke="#0284C7" stroke-width="1.5"/>
+            <rect x="0" y="0" width="430" height="28" rx="6" fill="#0284C7"/>
+            <text class="font-sans" x="12" y="19" fill="#FFFFFF" font-weight="700" font-size="11">FastAPI Telecom Application Server (Uvicorn Daemon)</text>
+
+            <g transform="translate(12, 40)">
+              <text class="font-sans box-desc" x="0" y="12">• Python asynchronous REST API service</text>
+              <text class="font-sans box-desc" x="0" y="30">• Telecom network topology ingestion &amp; alarm processing</text>
+              <text class="font-sans box-desc" x="0" y="48">• Managed as enterprise systemd unit (`nms-api.service`)</text>
+              <text class="font-sans box-desc" x="0" y="66">• Auto-restart on failure &amp; health probe check (`/healthz`)</text>
+              <text class="font-sans box-desc" x="0" y="86">• Async connection pool to Azure PostgreSQL Database</text>
+            </g>
+          </g>
+
+          <!-- Linux Admin Footer -->
+          <rect x="20" y="415" width="430" height="35" rx="4" fill="#F1F5F9" stroke="#CBD5E1"/>
+          <text class="font-sans" x="30" y="437" fill="#475569" font-size="10" font-weight="600">Administered via SSH Keys, RBAC, OS Hardening, Patching &amp; Monitoring</text>
+        </g>
+      </g>
+
+      <!-- Subnet 2: Database Tier -->
+      <g transform="translate(560, 35)">
+        <rect width="505" height="540" rx="8" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5" stroke-dasharray="6,4"/>
+        <rect x="0" y="0" width="505" height="32" rx="8" fill="#E2E8F0"/>
+        <text class="font-sans" x="15" y="21" fill="#1E293B" font-weight="700" font-size="11.5">SUBNET: snet-database (10.0.3.0/24) | NSG: nsg-database</text>
+
+        <!-- Azure Database for PostgreSQL Card -->
+        <g transform="translate(20, 50)">
+          <rect width="465" height="255" rx="8" fill="#FFFFFF" stroke="#2563EB" stroke-width="2" filter="url(#boxShadow2)"/>
+          <rect x="0" y="0" width="465" height="36" rx="8" fill="#2563EB"/>
+          <text class="font-sans" x="18" y="23" fill="#FFFFFF" font-weight="700" font-size="12">Azure Database for PostgreSQL (Flexible Server)</text>
+          
+          <g transform="translate(18, 55)">
+            <rect width="430" height="32" rx="4" fill="#EFF6FF" stroke="#BFDBFE"/>
+            <text class="font-sans" x="10" y="21" fill="#1E3A8A" font-weight="700" font-size="11">Private Connectivity / VNet Integration (No Public IP)</text>
+
+            <g transform="translate(0, 48)">
+              <text class="font-sans box-desc" x="0" y="14">• Dedicated subnet delegation for PostgreSQL Flexible Server</text>
+              <text class="font-sans box-desc" x="0" y="34">• Private DNS Zone resolution (`privatelink.postgres.database.azure.com`)</text>
+              <text class="font-sans box-desc" x="0" y="54">• Stores telecom device inventory, active alarms &amp; topology metrics</text>
+              <text class="font-sans box-desc" x="0" y="74">• Automated daily backups &amp; point-in-time recovery (PITR)</text>
+              <text class="font-sans box-desc" x="0" y="94">• High availability with zone-redundant storage</text>
+              <text class="font-sans box-desc" x="0" y="114">• Enforced SSL/TLS connections for all client sessions</text>
+            </g>
+          </g>
+        </g>
+
+        <!-- NSG Security Rules Card -->
+        <g transform="translate(20, 325)">
+          <rect width="465" height="190" rx="8" fill="#FEF2F2" stroke="#EF4444" stroke-width="1.5"/>
+          <text class="font-sans" x="18" y="24" fill="#991B1B" font-weight="700" font-size="11.5">Network Security Group (NSG) Strict Enforcement</text>
+          
+          <g transform="translate(18, 42)">
+            <rect width="430" height="35" rx="4" fill="#FFFFFF" stroke="#FCA5A5"/>
+            <text class="font-sans" x="10" y="22" fill="#B91C1C" font-weight="700" font-size="10.5">ALLOW: TCP Port 5432 from 10.0.2.0/24 (snet-backend-app)</text>
+
+            <rect y="45" width="430" height="35" rx="4" fill="#FFFFFF" stroke="#FCA5A5"/>
+            <text class="font-sans" x="10" y="22" fill="#B91C1C" font-weight="700" font-size="10.5">DENY: Inbound from Internet / All other subnets</text>
+
+            <text class="font-sans" x="0" y="105" fill="#7F1D1D" font-size="10">• Principle of Least Privilege: Zero public access to data layer</text>
+            <text class="font-sans" x="0" y="125" fill="#7F1D1D" font-size="10">• Statefully inspected traffic with Azure Network Security Group</text>
+          </g>
+        </g>
+      </g>
+
+      <!-- Connection from Backend to Database -->
+      <!-- Draw horizontal line between subnets -->
+      <path d="M 535 340 L 580 340" stroke="#2563EB" stroke-width="3" fill="none" marker-end="url(#arrowhead-db)"/>
+
+      <!-- ================= MANAGEMENT SERVICES ROW (BOTTOM) ================= -->
+      <g transform="translate(25, 595)">
+        <rect width="1040" height="165" rx="8" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+        <text class="font-sans tier-header" x="18" y="24">ENTERPRISE GOVERNANCE, OBSERVABILITY &amp; AUTOMATION SERVICES</text>
+
+        <!-- Box 1: Key Vault -->
+        <g transform="translate(20, 38)">
+          <rect width="235" height="110" rx="6" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.5" filter="url(#boxShadow2)"/>
+          <text class="font-sans" x="12" y="22" fill="#6D28D9" font-weight="700" font-size="11">Azure Key Vault</text>
+          <text class="font-sans box-desc" x="12" y="42">• Database passwords &amp; secrets</text>
+          <text class="font-sans box-desc" x="12" y="60">• TLS/SSL certificates</text>
+          <text class="font-sans box-desc" x="12" y="78">• Managed Identity RBAC access</text>
+          <text class="font-sans box-desc" x="12" y="96">• Zero secrets in source code</text>
+        </g>
+
+        <!-- Box 2: Azure Monitor & Prometheus -->
+        <g transform="translate(275, 38)">
+          <rect width="235" height="110" rx="6" fill="#FFFFFF" stroke="#EA580C" stroke-width="1.5" filter="url(#boxShadow2)"/>
+          <text class="font-sans" x="12" y="22" fill="#C2410C" font-weight="700" font-size="11">Azure Monitor &amp; Prometheus</text>
+          <text class="font-sans box-desc" x="12" y="42">• VM CPU, RAM &amp; Disk metrics</text>
+          <text class="font-sans box-desc" x="12" y="60">• Nginx access &amp; error logs</text>
+          <text class="font-sans box-desc" x="12" y="78">• Node Exporter telemetry</text>
+          <text class="font-sans box-desc" x="12" y="96">• Real-time NOC alerting rules</text>
+        </g>
+
+        <!-- Box 3: Terraform IaC -->
+        <g transform="translate(530, 38)">
+          <rect width="235" height="110" rx="6" fill="#FFFFFF" stroke="#6366F1" stroke-width="1.5" filter="url(#boxShadow2)"/>
+          <text class="font-sans" x="12" y="22" fill="#4338CA" font-weight="700" font-size="11">Terraform Infrastructure as Code</text>
+          <text class="font-sans box-desc" x="12" y="42">• Declarative Azure provisioning</text>
+          <text class="font-sans box-desc" x="12" y="60">• Reusable modular repository</text>
+          <text class="font-sans box-desc" x="12" y="78">• Remote state in Azure Storage</text>
+          <text class="font-sans box-desc" x="12" y="96">• Checkov &amp; tfsec shift-left scans</text>
+        </g>
+
+        <!-- Box 4: Azure DevOps & GitHub Actions -->
+        <g transform="translate(785, 38)">
+          <rect width="235" height="110" rx="6" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.5" filter="url(#boxShadow2)"/>
+          <text class="font-sans" x="12" y="22" fill="#0369A1" font-weight="700" font-size="11">Azure DevOps &amp; GitHub Actions</text>
+          <text class="font-sans box-desc" x="12" y="42">• YAML multi-stage pipelines</text>
+          <text class="font-sans box-desc" x="12" y="60">• Automated build &amp; validation</text>
+          <text class="font-sans box-desc" x="12" y="78">• PR reviews &amp; branch policies</text>
+          <text class="font-sans box-desc" x="12" y="96">• Multi-env deployment (Dev/Stage/Prod)</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Arrow between Frontend and Backend VNet -->
+    <path d="M 390 320 L 445 320" stroke="#0078D4" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+    <text class="font-sans conn-label" x="385" y="310">API Calls (REST/JSON)</text>
+  </g>
+</svg>

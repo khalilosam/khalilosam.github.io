@@ -1,0 +1,329 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="60%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <linearGradient id="azureGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0078D4"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+
+    <!-- Filters & Shadows -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+    </filter>
+    <filter id="subtleShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.05"/>
+    </filter>
+  </defs>
+
+  <style>
+    .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .title { font-weight: 800; font-size: 26px; fill: #FFFFFF; }
+    .subtitle { font-weight: 500; font-size: 13px; fill: #94A3B8; }
+    .section-head { font-weight: 700; font-size: 14px; fill: #0F172A; letter-spacing: 0.5px; }
+    .card-title { font-weight: 700; font-size: 13px; fill: #0F172A; }
+    .card-body { font-weight: 400; font-size: 11px; fill: #475569; line-height: 1.5; }
+    .badge-text { font-weight: 600; font-size: 10px; fill: #0369A1; }
+    .pill { rx: 6px; ry: 6px; }
+  </style>
+
+  <!-- Background Canvas -->
+  <rect width="1600" height="1200" fill="#F1F5F9"/>
+
+  <!-- ================= HEADER BANNER ================= -->
+  <rect x="30" y="25" width="1540" height="115" rx="12" fill="url(#headerGrad)" filter="url(#cardShadow)"/>
+  
+  <!-- Profile Title & Role -->
+  <text class="font-sans title" x="65" y="68">OSAMA KHALIL</text>
+  <rect x="260" y="48" width="150" height="24" rx="12" fill="#0369A1"/>
+  <text class="font-sans" x="272" y="64" fill="#E0F2FE" font-weight="700" font-size="11">SENIOR DEVOPS</text>
+  
+  <text class="font-sans subtitle" x="65" y="96">DevOps Engineer | Microsoft Azure | Terraform | CI/CD | Linux Administration</text>
+  <text class="font-sans" x="65" y="118" fill="#38BDF8" font-size="11" font-weight="600">Current: Senior Engineer – DevOps at Ericsson India Global Services | 11 Years IT Experience (6 Years DevOps &amp; Linux)</text>
+
+  <!-- Header Right Contact & Badges -->
+  <g transform="translate(1220, 42)">
+    <rect width="320" height="80" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+    <text class="font-sans" x="20" y="24" fill="#94A3B8" font-size="11">Location: <tspan fill="#F8FAFC" font-weight="600">New Delhi, India</tspan></text>
+    <text class="font-sans" x="20" y="44" fill="#94A3B8" font-size="11">Specialization: <tspan fill="#38BDF8" font-weight="600">Azure IaC &amp; CI/CD</tspan></text>
+    <text class="font-sans" x="20" y="64" fill="#94A3B8" font-size="11">Education: <tspan fill="#F8FAFC" font-weight="600">B.Tech ECE + PG Cloud Computing</tspan></text>
+  </g>
+
+  <!-- ================= SECTION: CAREER TIMELINE (11 YEARS) ================= -->
+  <g transform="translate(30, 160)">
+    <!-- Outer Card -->
+    <rect width="1540" height="155" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#cardShadow)"/>
+    
+    <!-- Section Title -->
+    <rect x="25" y="-12" width="280" height="24" rx="4" fill="#0078D4"/>
+    <text class="font-sans" x="35" y="4" fill="#FFFFFF" font-size="11" font-weight="700">PROFESSIONAL CAREER TIMELINE (11 YEARS)</text>
+
+    <!-- Timeline Horizontal Guide Line -->
+    <line x1="60" y1="75" x2="1480" y2="75" stroke="#CBD5E1" stroke-width="3" stroke-dasharray="6,6"/>
+
+    <!-- Milestone 1: Nutek India -->
+    <g transform="translate(50, 25)">
+      <circle cx="20" cy="50" r="10" fill="#64748B" stroke="#FFFFFF" stroke-width="3"/>
+      <rect x="0" y="68" width="260" height="52" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text class="font-sans" x="10" y="85" font-weight="700" font-size="11" fill="#0F172A">Nutek India Pvt. Ltd.</text>
+      <text class="font-sans" x="10" y="99" font-size="10" fill="#64748B">Site Engineer (Field) | Oct 2013 – Jan 2016</text>
+      <text class="font-sans" x="10" y="112" font-size="9.5" fill="#475569">Telecom site infrastructure &amp; Nokia BTS</text>
+    </g>
+
+    <!-- Milestone 2: Universal Telecom -->
+    <g transform="translate(340, 25)">
+      <circle cx="20" cy="50" r="10" fill="#475569" stroke="#FFFFFF" stroke-width="3"/>
+      <rect x="0" y="68" width="260" height="52" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text class="font-sans" x="10" y="85" font-weight="700" font-size="11" fill="#0F172A">Universal Telecom Pvt. Ltd.</text>
+      <text class="font-sans" x="10" y="99" font-size="10" fill="#64748B">BTS Engineer (NOC/BSS) | Mar 2016 – Jan 2017</text>
+      <text class="font-sans" x="10" y="112" font-size="9.5" fill="#475569">NOC operations, BSS alarms &amp; incident mgmt</text>
+    </g>
+
+    <!-- Milestone 3: Engicell Technology -->
+    <g transform="translate(630, 25)">
+      <circle cx="20" cy="50" r="10" fill="#0284C7" stroke="#FFFFFF" stroke-width="3"/>
+      <rect x="0" y="68" width="275" height="52" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text class="font-sans" x="10" y="85" font-weight="700" font-size="11" fill="#0F172A">Engicell Technology Ltd.</text>
+      <text class="font-sans" x="10" y="99" font-size="10" fill="#64748B">Telecom Implementation | Feb 2017 – Oct 2020</text>
+      <text class="font-sans" x="10" y="112" font-size="9.5" fill="#475569">Airtel / Huawei: Zambia, Kenya, Malawi, Namibia</text>
+    </g>
+
+    <!-- Milestone 4: Emerald Telecom -->
+    <g transform="translate(935, 25)">
+      <circle cx="20" cy="50" r="10" fill="#2563EB" stroke="#FFFFFF" stroke-width="3"/>
+      <rect x="0" y="68" width="265" height="52" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text class="font-sans" x="10" y="85" font-weight="700" font-size="11" fill="#0F172A">Emerald Telecom Pvt. Ltd.</text>
+      <text class="font-sans" x="10" y="99" font-size="10" fill="#64748B">Network Engineer (Linux) | Mar 2021 – Oct 2021</text>
+      <text class="font-sans" x="10" y="112" font-size="9.5" fill="#475569">Linux gateways, iptables, routing, tcpdump</text>
+    </g>
+
+    <!-- Milestone 5: Ericsson India (Current) -->
+    <g transform="translate(1230, 25)">
+      <circle cx="20" cy="50" r="12" fill="#0078D4" stroke="#FFFFFF" stroke-width="3"/>
+      <rect x="0" y="68" width="280" height="52" rx="6" fill="#EFF6FF" stroke="#0078D4" stroke-width="1.5"/>
+      <text class="font-sans" x="10" y="85" font-weight="700" font-size="11" fill="#1E3A8A">Ericsson India Global Services</text>
+      <text class="font-sans" x="10" y="99" font-size="10" fill="#0284C7" font-weight="600">Senior Engineer – DevOps | Dec 2021 – Present</text>
+      <text class="font-sans" x="10" y="112" font-size="9.5" fill="#1E40AF">Azure IaC, Terraform, CI/CD, Enterprise Linux</text>
+    </g>
+  </g>
+
+  <!-- ================= ROW 2: ARCHITECTURE AT A GLANCE (3 TIERS) ================= -->
+  <g transform="translate(30, 335)">
+    <!-- Container -->
+    <rect width="1540" height="380" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#cardShadow)"/>
+    
+    <!-- Title -->
+    <rect x="25" y="-12" width="460" height="24" rx="4" fill="#0F172A"/>
+    <text class="font-sans" x="35" y="4" fill="#FFFFFF" font-size="11" font-weight="700">PRIMARY PROJECT: TELECOM NETWORK MANAGEMENT SYSTEM (NMS) ON AZURE</text>
+
+    <!-- 3 Logical Architecture Cards -->
+    <!-- Tier 1: Frontend -->
+    <g transform="translate(30, 35)">
+      <rect width="450" height="315" rx="8" fill="#F8FAFC" stroke="#0078D4" stroke-width="1.5"/>
+      <rect x="0" y="0" width="450" height="36" rx="8" fill="#0078D4"/>
+      <text class="font-sans" x="18" y="23" fill="#FFFFFF" font-weight="700" font-size="12">1. FRONTEND PRESENTATION TIER</text>
+      
+      <g transform="translate(20, 55)">
+        <rect width="410" height="60" rx="6" fill="#FFFFFF" stroke="#CBD5E1"/>
+        <text class="font-sans card-title" x="15" y="25">Azure Storage Static Website ($web)</text>
+        <text class="font-sans card-body" x="15" y="45">Decoupled Single Page Application (SPA) hosting telecom NMS UI</text>
+
+        <rect y="75" width="410" height="75" rx="6" fill="#FFFFFF" stroke="#CBD5E1"/>
+        <text class="font-sans card-title" x="15" y="22">Client Ingress &amp; Delivery</text>
+        <text class="font-sans card-body" x="15" y="40">• Secure HTTPS (Port 443) / TLS 1.3 encryption</text>
+        <text class="font-sans card-body" x="15" y="58">• Low latency distribution to Telecom NOC operators</text>
+
+        <rect y="165" width="410" height="75" rx="6" fill="#EFF6FF" stroke="#BFDBFE"/>
+        <text class="font-sans card-title" x="15" y="22" fill="#1E40AF">DevOps &amp; Automation Characteristics</text>
+        <text class="font-sans card-body" x="15" y="40">• Provisioned via Terraform `azurerm_storage_account`</text>
+        <text class="font-sans card-body" x="15" y="58">• Automated artifact sync in Azure DevOps Release Pipeline</text>
+      </g>
+    </g>
+
+    <!-- Tier 2: Backend Application Tier -->
+    <g transform="translate(515, 35)">
+      <rect width="510" height="315" rx="8" fill="#F8FAFC" stroke="#0284C7" stroke-width="1.5"/>
+      <rect x="0" y="0" width="510" height="36" rx="8" fill="#0284C7"/>
+      <text class="font-sans" x="18" y="23" fill="#FFFFFF" font-weight="700" font-size="12">2. BACKEND APPLICATION TIER (Azure VNet: snet-backend-app)</text>
+
+      <g transform="translate(20, 55)">
+        <rect width="470" height="75" rx="6" fill="#FFFFFF" stroke="#CBD5E1"/>
+        <text class="font-sans card-title" x="15" y="22">Linux Virtual Machine (Enterprise RHEL / Ubuntu)</text>
+        <text class="font-sans card-body" x="15" y="40">• Hardened OS baseline, performance tuning &amp; security patching</text>
+        <text class="font-sans card-body" x="15" y="58">• Role-Based Access Control (RBAC) &amp; secure SSH key authentication</text>
+
+        <rect y="90" width="470" height="75" rx="6" fill="#FFFFFF" stroke="#CBD5E1"/>
+        <text class="font-sans card-title" x="15" y="22">Nginx Web Server &amp; Reverse Proxy</text>
+        <text class="font-sans card-body" x="15" y="40">• SSL termination, HTTP rate limiting, access log collection</text>
+        <text class="font-sans card-body" x="15" y="58">• High-performance proxy pass to FastAPI ASGI daemon (localhost:8000)</text>
+
+        <rect y="180" width="470" height="60" rx="6" fill="#FFFFFF" stroke="#CBD5E1"/>
+        <text class="font-sans card-title" x="15" y="22">FastAPI Telecom Application Server</text>
+        <text class="font-sans card-body" x="15" y="40">• Asynchronous REST APIs, systemd process management &amp; auto-restart</text>
+      </g>
+    </g>
+
+    <!-- Tier 3: Database & Data Tier -->
+    <g transform="translate(1060, 35)">
+      <rect width="450" height="315" rx="8" fill="#F8FAFC" stroke="#2563EB" stroke-width="1.5"/>
+      <rect x="0" y="0" width="450" height="36" rx="8" fill="#2563EB"/>
+      <text class="font-sans" x="18" y="23" fill="#FFFFFF" font-weight="700" font-size="12">3. DATABASE TIER (Azure VNet: snet-database)</text>
+
+      <g transform="translate(20, 55)">
+        <rect width="410" height="60" rx="6" fill="#FFFFFF" stroke="#CBD5E1"/>
+        <text class="font-sans card-title" x="15" y="25">Azure Database for PostgreSQL (Flexible Server)</text>
+        <text class="font-sans card-body" x="15" y="45">Managed relational engine for network topology &amp; alarms</text>
+
+        <rect y="75" width="410" height="75" rx="6" fill="#FFFFFF" stroke="#CBD5E1"/>
+        <text class="font-sans card-title" x="15" y="22">Private Connectivity &amp; Security</text>
+        <text class="font-sans card-body" x="15" y="40">• Zero Public IP | Private Endpoint / VNet Integration</text>
+        <text class="font-sans card-body" x="15" y="58">• NSG Rule: Inbound Port 5432 strictly from snet-backend-app</text>
+
+        <rect y="165" width="410" height="75" rx="6" fill="#EFF6FF" stroke="#BFDBFE"/>
+        <text class="font-sans card-title" x="15" y="22" fill="#1E40AF">Enterprise Governance &amp; Reliability</text>
+        <text class="font-sans card-body" x="15" y="40">• Automated backups, point-in-time recovery &amp; high availability</text>
+        <text class="font-sans card-body" x="15" y="58">• Secrets stored in Azure Key Vault; monitored in Azure Monitor</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= ROW 3: TERRAFORM & CI/CD ENGINEERING FRAMEWORK ================= -->
+  <g transform="translate(30, 735)">
+    <!-- Container -->
+    <rect width="1540" height="230" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#cardShadow)"/>
+
+    <!-- Left Box: Terraform Workflow Summary -->
+    <g transform="translate(25, 20)">
+      <rect width="730" height="190" rx="8" fill="#F8FAFC" stroke="#6366F1" stroke-width="1.2"/>
+      <rect x="0" y="0" width="730" height="32" rx="8" fill="#6366F1"/>
+      <text class="font-sans" x="15" y="21" fill="#FFFFFF" font-weight="700" font-size="11.5">TERRAFORM INFRASTRUCTURE AS CODE (IaC) LIFECYCLE</text>
+
+      <g transform="translate(15, 45)">
+        <text class="font-sans" x="0" y="15" font-weight="700" font-size="11" fill="#312E81">Modular Repository Structure:</text>
+        <text class="font-sans" x="0" y="32" font-size="10.5" fill="#475569">• Reusable modules (`vnet`, `subnets`, `nsg`, `linux_vm`, `postgresql`, `storage_account`)</text>
+        <text class="font-sans" x="0" y="50" font-size="10.5" fill="#475569">• Standardized variables, outputs &amp; environment configs (`dev`, `stage`, `prod`)</text>
+        
+        <text class="font-sans" x="0" y="75" font-weight="700" font-size="11" fill="#312E81">Remote State &amp; Shift-Left Security Scans:</text>
+        <text class="font-sans" x="0" y="92" font-size="10.5" fill="#475569">• State hosted on Azure Blob Storage with automated lease-based state locking</text>
+        <text class="font-sans" x="0" y="110" font-size="10.5" fill="#475569">• Static security &amp; policy scanning: &lt;b&gt;tflint&lt;/b&gt;, &lt;b&gt;Checkov&lt;/b&gt;, and &lt;b&gt;tfsec&lt;/b&gt; in PR gates</text>
+        <text class="font-sans" x="0" y="128" font-size="10.5" fill="#475569">• Speculative &lt;b&gt;terraform plan&lt;/b&gt; preview prior to approved multi-environment deployment</text>
+      </g>
+    </g>
+
+    <!-- Right Box: CI/CD Pipeline Summary -->
+    <g transform="translate(785, 20)">
+      <rect width="730" height="190" rx="8" fill="#F8FAFC" stroke="#0284C7" stroke-width="1.2"/>
+      <rect x="0" y="0" width="730" height="32" rx="8" fill="#0284C7"/>
+      <text class="font-sans" x="15" y="21" fill="#FFFFFF" font-weight="700" font-size="11.5">ENTERPRISE CI/CD PIPELINES (AZURE DEVOPS &amp; GITHUB ACTIONS)</text>
+
+      <g transform="translate(15, 45)">
+        <text class="font-sans" x="0" y="15" font-weight="700" font-size="11" fill="#0369A1">Branch Policies &amp; Pull Request Governance:</text>
+        <text class="font-sans" x="0" y="32" font-size="10.5" fill="#475569">• Feature branch isolation (`feat/*`), mandatory peer code review approvals</text>
+        <text class="font-sans" x="0" y="50" font-size="10.5" fill="#475569">• Automated PR validation builds &amp; zero direct pushes to protected `main` branch</text>
+
+        <text class="font-sans" x="0" y="75" font-weight="700" font-size="11" fill="#0369A1">Multi-Stage Build, Test &amp; Multi-Environment Deployment:</text>
+        <text class="font-sans" x="0" y="92" font-size="10.5" fill="#475569">• Automated linting, pytest unit suites &amp; drop artifact publishing in YAML pipelines</text>
+        <text class="font-sans" x="0" y="110" font-size="10.5" fill="#475569">• Continuous Deployment: Automated Dev deploy -&gt; Pre-prod Stage -&gt; Prod Manual Gate</text>
+        <text class="font-sans" x="0" y="128" font-size="10.5" fill="#475569">• Zero-downtime rolling service restart on Linux VM behind Nginx reverse proxy</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= ROW 4: TECHNICAL SKILLS MATRIX ================= -->
+  <g transform="translate(30, 985)">
+    <rect width="1540" height="185" rx="10" fill="#0F172A" filter="url(#cardShadow)"/>
+    
+    <text class="font-sans" x="30" y="32" fill="#38BDF8" font-size="13" font-weight="700">VERIFIED DEVOPS TECHNICAL COMPETENCY DOMAINS</text>
+    
+    <g transform="translate(30, 48)">
+      <!-- Col 1: Cloud -->
+      <g transform="translate(0, 0)">
+        <rect width="200" height="115" rx="6" fill="#1E293B" stroke="#334155"/>
+        <text class="font-sans" x="12" y="22" fill="#38BDF8" font-weight="700" font-size="11">CLOUD INFRASTRUCTURE</text>
+        <text class="font-sans" x="12" y="42" fill="#E2E8F0" font-size="10">• Microsoft Azure</text>
+        <text class="font-sans" x="12" y="58" fill="#94A3B8" font-size="9.5">• VNet, Subnets, NSG, VM</text>
+        <text class="font-sans" x="12" y="74" fill="#94A3B8" font-size="9.5">• Storage, Key Vault, Monitor</text>
+        <text class="font-sans" x="12" y="90" fill="#94A3B8" font-size="9.5">• Azure PostgreSQL Flexible</text>
+        <text class="font-sans" x="12" y="104" fill="#94A3B8" font-size="9.5">• Landing Zone Concepts</text>
+      </g>
+
+      <!-- Col 2: IaC -->
+      <g transform="translate(215, 0)">
+        <rect width="200" height="115" rx="6" fill="#1E293B" stroke="#334155"/>
+        <text class="font-sans" x="12" y="22" fill="#818CF8" font-weight="700" font-size="11">INFRASTRUCTURE AS CODE</text>
+        <text class="font-sans" x="12" y="42" fill="#E2E8F0" font-size="10">• HashiCorp Terraform</text>
+        <text class="font-sans" x="12" y="58" fill="#94A3B8" font-size="9.5">• Reusable Child Modules</text>
+        <text class="font-sans" x="12" y="74" fill="#94A3B8" font-size="9.5">• Remote State (Azure Blob)</text>
+        <text class="font-sans" x="12" y="90" fill="#94A3B8" font-size="9.5">• Workspaces, Vars, Outputs</text>
+        <text class="font-sans" x="12" y="104" fill="#94A3B8" font-size="9.5">• Checkov, tfsec, tflint</text>
+      </g>
+
+      <!-- Col 3: CI/CD -->
+      <g transform="translate(430, 0)">
+        <rect width="200" height="115" rx="6" fill="#1E293B" stroke="#334155"/>
+        <text class="font-sans" x="12" y="22" fill="#34D399" font-weight="700" font-size="11">CI/CD &amp; VERSION CONTROL</text>
+        <text class="font-sans" x="12" y="42" fill="#E2E8F0" font-size="10">• Azure DevOps Pipelines</text>
+        <text class="font-sans" x="12" y="58" fill="#94A3B8" font-size="9.5">• GitHub Actions</text>
+        <text class="font-sans" x="12" y="74" fill="#94A3B8" font-size="9.5">• Multi-stage YAML Pipelines</text>
+        <text class="font-sans" x="12" y="90" fill="#94A3B8" font-size="9.5">• Git, Pull Requests</text>
+        <text class="font-sans" x="12" y="104" fill="#94A3B8" font-size="9.5">• Branch Protection Policies</text>
+      </g>
+
+      <!-- Col 4: Linux & Scripting -->
+      <g transform="translate(645, 0)">
+        <rect width="200" height="115" rx="6" fill="#1E293B" stroke="#334155"/>
+        <text class="font-sans" x="12" y="22" fill="#FBBF24" font-weight="700" font-size="11">LINUX &amp; SCRIPTING</text>
+        <text class="font-sans" x="12" y="42" fill="#E2E8F0" font-size="10">• Enterprise Linux (RHEL/Ubuntu)</text>
+        <text class="font-sans" x="12" y="58" fill="#94A3B8" font-size="9.5">• systemd Service Mgmt</text>
+        <text class="font-sans" x="12" y="74" fill="#94A3B8" font-size="9.5">• Bash Scripting &amp; Automation</text>
+        <text class="font-sans" x="12" y="90" fill="#94A3B8" font-size="9.5">• Python &amp; FastAPI</text>
+        <text class="font-sans" x="12" y="104" fill="#94A3B8" font-size="9.5">• Nginx &amp; Reverse Proxy</text>
+      </g>
+
+      <!-- Col 5: Monitoring & Security -->
+      <g transform="translate(860, 0)">
+        <rect width="200" height="115" rx="6" fill="#1E293B" stroke="#334155"/>
+        <text class="font-sans" x="12" y="22" fill="#F87171" font-weight="700" font-size="11">MONITORING &amp; SECURITY</text>
+        <text class="font-sans" x="12" y="42" fill="#E2E8F0" font-size="10">• Prometheus Monitoring</text>
+        <text class="font-sans" x="12" y="58" fill="#94A3B8" font-size="9.5">• Azure Monitor &amp; Alerts</text>
+        <text class="font-sans" x="12" y="74" fill="#94A3B8" font-size="9.5">• Azure Key Vault Secrets</text>
+        <text class="font-sans" x="12" y="90" fill="#94A3B8" font-size="9.5">• RBAC &amp; Least Privilege</text>
+        <text class="font-sans" x="12" y="104" fill="#94A3B8" font-size="9.5">• Shift-Left IaC Scanning</text>
+      </g>
+
+      <!-- Col 6: Automation & Tools -->
+      <g transform="translate(1075, 0)">
+        <rect width="200" height="115" rx="6" fill="#1E293B" stroke="#334155"/>
+        <text class="font-sans" x="12" y="22" fill="#A78BFA" font-weight="700" font-size="11">AUTOMATION &amp; TOOLS</text>
+        <text class="font-sans" x="12" y="42" fill="#E2E8F0" font-size="10">• Ansible Playbooks</text>
+        <text class="font-sans" x="12" y="58" fill="#94A3B8" font-size="9.5">• Power Automate Flows</text>
+        <text class="font-sans" x="12" y="74" fill="#94A3B8" font-size="9.5">• JIRA Project Tracking</text>
+        <text class="font-sans" x="12" y="90" fill="#94A3B8" font-size="9.5">• Confluence Documentation</text>
+        <text class="font-sans" x="12" y="104" fill="#94A3B8" font-size="9.5">• Agile / Scrum Delivery</text>
+      </g>
+
+      <!-- Col 7: Telecom & Networking -->
+      <g transform="translate(1290, 0)">
+        <rect width="190" height="115" rx="6" fill="#1E293B" stroke="#334155"/>
+        <text class="font-sans" x="12" y="22" fill="#38BDF8" font-weight="700" font-size="11">NETWORKING &amp; TELECOM</text>
+        <text class="font-sans" x="12" y="42" fill="#E2E8F0" font-size="10">• TCP/IP, DNS, Routing</text>
+        <text class="font-sans" x="12" y="58" fill="#94A3B8" font-size="9.5">• Firewalls &amp; iptables</text>
+        <text class="font-sans" x="12" y="74" fill="#94A3B8" font-size="9.5">• VLANs, tcpdump, Wireshark</text>
+        <text class="font-sans" x="12" y="90" fill="#94A3B8" font-size="9.5">• 4G / 5G RAN Concepts</text>
+        <text class="font-sans" x="12" y="104" fill="#94A3B8" font-size="9.5">• NOC / BSS Operations</text>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,140 @@
+<mxfile host="app.diagrams.net" modified="2026-10-31T15:00:00.000Z" agent="Antigravity Architecture Designer" version="21.6.8" type="device">
+  <diagram id="azure-nms-telecom" name="Telecom NMS Azure Architecture">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title & Metadata Banner -->
+        <mxCell id="title_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0F172A;strokeColor=#1E293B;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1520" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="title_text" value="TELECOM NETWORK MANAGEMENT SYSTEM (NMS) — MICROSOFT AZURE ARCHITECTURE" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#FFFFFF;fontSize=20;fontStyle=1;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="70" y="32" width="950" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle_text" value="Production 3-Tier Enterprise Cloud Architecture | Provisioned via Terraform IaC | Automated with Azure DevOps &amp; GitHub Actions | Zero-Trust Private Connectivity" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#94A3B8;fontSize=12;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="70" y="65" width="1050" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="author_badge" value="Designed by: Osama Khalil&#xa;Senior DevOps Engineer | Azure &amp; Linux Specialist" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#0078D4;fontColor=#38BDF8;fontSize=11;align=center;fontStyle=1;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="35" width="300" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Azure Cloud Boundary -->
+        <mxCell id="cloud_boundary" value="Microsoft Azure Cloud Subscription" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#0078D4;strokeWidth=2;dashed=0;fontColor=#0F172A;fontSize=14;fontStyle=1;align=left;verticalAlign=top;spacingLeft=20;spacingTop=15;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="40" y="130" width="1520" height="830" as="geometry" />
+        </mxCell>
+
+        <!-- Column 1: Client & Presentation Tier -->
+        <mxCell id="col1_bg" value="TIER 1: PRESENTATION &amp; INGRESS LAYER" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#CBD5E1;fontColor=#334155;fontSize=12;fontStyle=1;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="70" y="180" width="360" height="740" as="geometry" />
+        </mxCell>
+
+        <!-- End Users Box -->
+        <mxCell id="users_card" value="&lt;b&gt;Telecom NOC &amp; Operations Users&lt;/b&gt;&lt;br&gt;Network Operations Center Engineers&lt;br&gt;&lt;font color='#0284C7'&gt;Access: Web Browser &amp;amp; REST API Clients&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=2;fontColor=#0F172A;fontSize=12;fontFamily=Segoe UI;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="230" width="300" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- HTTPS Protocol Arrow -->
+        <mxCell id="conn_user_to_web" value="HTTPS / TLS 1.3&#xa;(TCP 443)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0284C7;strokeWidth=2;fontColor=#0369A1;fontSize=11;fontStyle=1;" edge="1" parent="1" source="users_card" target="frontend_card">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Azure Storage Static Website -->
+        <mxCell id="frontend_card" value="&lt;b&gt;Azure Storage Static Website&lt;/b&gt;&lt;br&gt;&lt;font color='#64748B'&gt;Container: &lt;/font&gt;&lt;b&gt;$web&lt;/b&gt;&lt;br&gt;Single Page Application (SPA)&lt;br&gt;HTML5 / CSS / JavaScript Telecom UI&lt;br&gt;&lt;font color='#059669'&gt;✔ Highly Available Serverless Hosting&lt;/font&gt;&lt;br&gt;&lt;font color='#059669'&gt;✔ Automated Deploy via CI/CD&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0078D4;strokeWidth=2;fontColor=#0F172A;fontSize=12;fontFamily=Segoe UI;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="380" width="300" height="130" as="geometry" />
+        </mxCell>
+
+        <!-- Presentation Info Box -->
+        <mxCell id="frontend_notes" value="&lt;b&gt;Frontend Specifications:&lt;/b&gt;&lt;br&gt;• Decoupled static UI distribution&lt;br&gt;• Low latency delivery of NMS dashboards&lt;br&gt;• Secure HTTPS public endpoint&lt;br&gt;• Provisions directly via Terraform&lt;br&gt;• Managed static asset cache" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#BFDBFE;fontColor=#1E3A8A;fontSize=11;align=left;spacingLeft=15;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="100" y="550" width="300" height="130" as="geometry" />
+        </mxCell>
+
+        <!-- Column 2: Azure Virtual Network & Backend Application Tier -->
+        <mxCell id="vnet_boundary" value="Azure Virtual Network (VNet) — 10.0.0.0/16" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0078D4;strokeWidth=2;dashed=1;fontColor=#0078D4;fontSize=13;fontStyle=1;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="460" y="180" width="1070" height="740" as="geometry" />
+        </mxCell>
+
+        <!-- Subnet: Backend Application -->
+        <mxCell id="subnet_backend" value="Subnet: snet-backend-app (10.0.2.0/24) | Protected by NSG (nsg-backend)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#64748B;strokeWidth=1.5;dashed=1;fontColor=#334155;fontSize=12;fontStyle=1;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="490" y="230" width="510" height="460" as="geometry" />
+        </mxCell>
+
+        <!-- Linux Virtual Machine Card -->
+        <mxCell id="vm_card" value="&lt;b&gt;Linux Virtual Machine&lt;/b&gt;&lt;br&gt;&lt;font color='#475569'&gt;OS: Enterprise Linux (RHEL / Ubuntu LTS)&lt;/font&gt;&lt;br&gt;IP: 10.0.2.10 (Private IP)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#1E40AF;strokeWidth=2;fontColor=#0F172A;fontSize=12;fontFamily=Segoe UI;shadow=1;verticalAlign=top;spacingTop=12;" vertex="1" parent="1">
+          <mxGeometry x="515" y="280" width="460" height="380" as="geometry" />
+        </mxCell>
+
+        <!-- Nginx Component inside VM -->
+        <mxCell id="nginx_card" value="&lt;b&gt;Nginx Reverse Proxy &amp; Web Server&lt;/b&gt;&lt;br&gt;&lt;font color='#16A34A'&gt;Port 80 / 443 Ingress&lt;/font&gt;&lt;br&gt;• Reverse Proxy to FastAPI daemon&lt;br&gt;• SSL/TLS Termination &amp;amp; HTTP Headers&lt;br&gt;• Rate Limiting &amp;amp; Access Logs (systemd)&lt;br&gt;• Static caching &amp;amp; Gzip compression" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#16A34A;strokeWidth=1.5;fontColor=#0F172A;fontSize=11;align=left;spacingLeft=15;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="540" y="340" width="410" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- Connector Nginx to FastAPI -->
+        <mxCell id="conn_nginx_fastapi" value="Reverse Proxy (Proxy Pass)&#xa;Localhost:8000 (ASGI Socket)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16A34A;strokeWidth=2;fontColor=#15803D;fontSize=10;fontStyle=1;" edge="1" parent="1" source="nginx_card" target="fastapi_card">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- FastAPI Component inside VM -->
+        <mxCell id="fastapi_card" value="&lt;b&gt;FastAPI Application Server&lt;/b&gt;&lt;br&gt;&lt;font color='#0284C7'&gt;Python ASGI Worker Processes (Uvicorn / Systemd)&lt;/font&gt;&lt;br&gt;• Telecom Network Monitoring &amp;amp; Alarm REST APIs&lt;br&gt;• Asynchronous high-throughput event processing&lt;br&gt;• Automated OpenAPI / Swagger documentation&lt;br&gt;• Managed via systemd service with auto-restart" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.5;fontColor=#0F172A;fontSize=11;align=left;spacingLeft=15;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="540" y="500" width="410" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- Arrow from Frontend to Nginx -->
+        <mxCell id="conn_web_to_api" value="API Calls (REST/JSON)&#xa;HTTPS Ingress" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0078D4;strokeWidth=2;fontColor=#0369A1;fontSize=11;fontStyle=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="frontend_card" target="nginx_card">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Subnet: Database Tier -->
+        <mxCell id="subnet_db" value="Subnet: snet-database (10.0.3.0/24) | Protected by NSG (nsg-database)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#64748B;strokeWidth=1.5;dashed=1;fontColor=#334155;fontSize=12;fontStyle=1;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="230" width="460" height="460" as="geometry" />
+        </mxCell>
+
+        <!-- Azure Database for PostgreSQL Flexible Server -->
+        <mxCell id="db_card" value="&lt;b&gt;Azure Database for PostgreSQL&lt;/b&gt;&lt;br&gt;&lt;font color='#334155'&gt;Flexible Server (Private Connectivity)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=2;fontColor=#0F172A;fontSize=13;fontFamily=Segoe UI;shadow=1;verticalAlign=top;spacingTop=15;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="280" width="400" height="230" as="geometry" />
+        </mxCell>
+
+        <!-- Database features list -->
+        <mxCell id="db_features" value="&lt;b&gt;Database Specifications:&lt;/b&gt;&lt;br&gt;• Telecom Network Topology &amp;amp; Alarm Records&lt;br&gt;• Private Endpoint / VNet Integration (No Public IP)&lt;br&gt;• Inbound Port 5432 strictly restricted to snet-backend-app&lt;br&gt;• Automated zone-redundant backups &amp;amp; point-in-time restore&lt;br&gt;• SSL/TLS mandatory encrypted database connection&lt;br&gt;• Credentials secured in Azure Key Vault" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#93C5FD;fontColor=#1E293B;fontSize=11;align=left;spacingLeft=12;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="1090" y="340" width="360" height="150" as="geometry" />
+        </mxCell>
+
+        <!-- Private Endpoint Connector -->
+        <mxCell id="conn_fastapi_to_db" value="Private Connectivity / VNet Peering&#xa;PostgreSQL Protocol (Port 5432)&#xa;TLS Encrypted Session" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2.5;fontColor=#1D4ED8;fontSize=11;fontStyle=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="fastapi_card" target="db_features">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- NSG Database Rule Badge -->
+        <mxCell id="nsg_db_badge" value="&lt;b&gt;NSG Security Rule:&lt;/b&gt; Allow TCP 5432 from 10.0.2.0/24 ONLY. Default Deny All from Internet." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF2F2;strokeColor=#EF4444;fontColor=#991B1B;fontSize=10;fontStyle=1;align=center;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="540" width="400" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Cross-Cutting Row: Security, Monitoring & IaC -->
+        <mxCell id="mgmt_boundary" value="ENTERPRISE MANAGEMENT, SECURITY &amp;amp; GOVERNANCE SERVICES" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#94A3B8;strokeWidth=1;fontColor=#475569;fontSize=11;fontStyle=1;align=left;verticalAlign=top;spacingLeft=15;spacingTop=8;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="490" y="710" width="1010" height="180" as="geometry" />
+        </mxCell>
+
+        <!-- Azure Key Vault -->
+        <mxCell id="keyvault_card" value="&lt;b&gt;Azure Key Vault&lt;/b&gt;&lt;br&gt;Secrets &amp;amp; Credentials Management&lt;br&gt;&lt;font color='#64748B'&gt;• DB connection strings &amp;amp; passwords&lt;br&gt;• Managed Identity / RBAC access&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#0F172A;fontSize=11;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="515" y="750" width="220" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- Azure Monitor & Prometheus -->
+        <mxCell id="monitor_card" value="&lt;b&gt;Azure Monitor &amp;amp; Prometheus&lt;/b&gt;&lt;br&gt;Observability &amp;amp; Alerting Platform&lt;br&gt;&lt;font color='#64748B'&gt;• VM host metrics &amp;amp; systemd logs&lt;br&gt;• Application telemetry &amp;amp; alerts&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#EA580C;strokeWidth=1.5;fontColor=#0F172A;fontSize=11;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="760" y="750" width="220" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- Terraform IaC Engine -->
+        <mxCell id="tf_card" value="&lt;b&gt;Terraform IaC Provisioning&lt;/b&gt;&lt;br&gt;Infrastructure as Code Modules&lt;br&gt;&lt;font color='#64748B'&gt;• Remote state in Azure Storage&lt;br&gt;• Automated validation &amp;amp; Checkov&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6366F1;strokeWidth=1.5;fontColor=#0F172A;fontSize=11;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="1005" y="750" width="220" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- CI/CD Pipelines -->
+        <mxCell id="cicd_card" value="&lt;b&gt;Azure DevOps &amp;amp; GitHub Actions&lt;/b&gt;&lt;br&gt;Automated CI/CD Delivery&lt;br&gt;&lt;font color='#64748B'&gt;• Automated build &amp;amp; deployment&lt;br&gt;• Branch policies &amp;amp; Pull Requests&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.5;fontColor=#0F172A;fontSize=11;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="750" width="225" height="110" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

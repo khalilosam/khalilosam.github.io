@@ -1,0 +1,127 @@
+<mxfile host="app.diagrams.net" modified="2026-10-31T15:00:00.000Z" agent="Antigravity Architecture Designer" version="21.6.8" type="device">
+  <diagram id="terraform-workflow-azure" name="Terraform Infrastructure Automation">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title Banner -->
+        <mxCell id="tf_title_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0F172A;strokeColor=#1E293B;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1520" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="tf_title_text" value="TERRAFORM INFRASTRUCTURE AS CODE (IaC) AUTOMATION WORKFLOW" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#FFFFFF;fontSize=20;fontStyle=1;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="70" y="32" width="1000" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="tf_subtitle_text" value="End-to-End Azure Infrastructure Delivery | Reusable Modules | Remote State with Blob Locking | Multi-Environment Workspaces | Shift-Left Security Scans" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#94A3B8;fontSize=12;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="70" y="65" width="1050" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="tf_author_badge" value="Designed by: Osama Khalil&#xa;Senior DevOps Engineer | Terraform &amp; Azure" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#6366F1;fontColor=#818CF8;fontSize=11;align=center;fontStyle=1;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="35" width="300" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Main Workflow Canvas -->
+        <mxCell id="canvas_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="40" y="130" width="1520" height="830" as="geometry" />
+        </mxCell>
+
+        <!-- Step 1: Git Repository & Branching -->
+        <mxCell id="step1_box" value="STEP 1: VERSION CONTROL &amp; REPO" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2FF;strokeColor=#6366F1;strokeWidth=1.5;fontColor=#3730A3;fontSize=11;fontStyle=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="65" y="160" width="220" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="step1_card" value="&lt;b&gt;Git Repository&lt;/b&gt;&lt;br&gt;&lt;font color='#4F46E5'&gt;Azure Repos / GitHub&lt;/font&gt;&lt;br&gt;&lt;br&gt;• Trunk-Based / Git Flow&lt;br&gt;• Feature branches (`feat/*`)&lt;br&gt;• Branch policies enforced&lt;br&gt;• Mandatory PR reviews&lt;br&gt;• Pre-commit hooks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6366F1;strokeWidth=1.5;fontColor=#0F172A;fontSize=11;align=left;spacingLeft=12;fontFamily=Segoe UI;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="200" width="190" height="320" as="geometry" />
+        </mxCell>
+
+        <!-- Step 2: Terraform Source Code -->
+        <mxCell id="step2_box" value="STEP 2: TERRAFORM SOURCE CODE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#3B82F6;strokeWidth=1.5;fontColor=#1E40AF;fontSize=11;fontStyle=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="315" y="160" width="220" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="step2_card" value="&lt;b&gt;Terraform Source Code&lt;/b&gt;&lt;br&gt;&lt;font color='#2563EB'&gt;Root &amp;amp; Structure Config&lt;/font&gt;&lt;br&gt;&lt;br&gt;• `main.tf`&lt;br&gt;• `variables.tf`&lt;br&gt;• `outputs.tf`&lt;br&gt;• `providers.tf` (azurerm)&lt;br&gt;• `backend.tf`&lt;br&gt;• Declarative HCL2 syntax&lt;br&gt;• Input validation &amp;amp; typing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;strokeWidth=1.5;fontColor=#0F172A;fontSize=11;align=left;spacingLeft=12;fontFamily=Segoe UI;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="200" width="190" height="320" as="geometry" />
+        </mxCell>
+
+        <!-- Step 3: Reusable Terraform Modules -->
+        <mxCell id="step3_box" value="STEP 3: REUSABLE MODULES" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0FDFA;strokeColor=#0D9488;strokeWidth=1.5;fontColor=#115E59;fontSize=11;fontStyle=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="565" y="160" width="220" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="step3_card" value="&lt;b&gt;Reusable Modules&lt;/b&gt;&lt;br&gt;&lt;font color='#0D9488'&gt;Enterprise Architecture&lt;/font&gt;&lt;br&gt;&lt;br&gt;• `modules/vnet`&lt;br&gt;• `modules/subnets`&lt;br&gt;• `modules/nsg`&lt;br&gt;• `modules/linux_vm`&lt;br&gt;• `modules/postgresql`&lt;br&gt;• `modules/storage_account`&lt;br&gt;• `modules/key_vault`&lt;br&gt;✔ DRY Principle &amp;amp; Standardized" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0D9488;strokeWidth=1.5;fontColor=#0F172A;fontSize=11;align=left;spacingLeft=12;fontFamily=Segoe UI;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="200" width="190" height="320" as="geometry" />
+        </mxCell>
+
+        <!-- Step 4: Environment Config & Workspaces -->
+        <mxCell id="step4_box" value="STEP 4: ENVIRONMENTS &amp; WORKSPACES" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#334155;fontSize=11;fontStyle=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="815" y="160" width="220" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="step4_card" value="&lt;b&gt;Environment Config&lt;/b&gt;&lt;br&gt;&lt;font color='#475569'&gt;Workspaces &amp;amp; Variables&lt;/font&gt;&lt;br&gt;&lt;br&gt;• &lt;b&gt;DEV:&lt;/b&gt; `dev.tfvars`&lt;br&gt;• &lt;b&gt;STAGE:&lt;/b&gt; `stage.tfvars`&lt;br&gt;• &lt;b&gt;PROD:&lt;/b&gt; `prod.tfvars`&lt;br&gt;• Workspace state isolation&lt;br&gt;• Environment-specific sizing&lt;br&gt;• Variable overrides&lt;br&gt;• Granular resource tags" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=11;align=left;spacingLeft=12;fontFamily=Segoe UI;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="830" y="200" width="190" height="320" as="geometry" />
+        </mxCell>
+
+        <!-- Step 5: Shift-Left & Terraform Plan -->
+        <mxCell id="step5_box" value="STEP 5: VALIDATE &amp; PLAN" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFBEB;strokeColor=#D97706;strokeWidth=1.5;fontColor=#B45309;fontSize=11;fontStyle=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="1065" y="160" width="220" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="step5_card" value="&lt;b&gt;Security &amp;amp; TF Plan&lt;/b&gt;&lt;br&gt;&lt;font color='#D97706'&gt;Pipeline Quality Gates&lt;/font&gt;&lt;br&gt;&lt;br&gt;• `terraform fmt -check`&lt;br&gt;• `terraform validate`&lt;br&gt;• `tflint` (rules &amp;amp; naming)&lt;br&gt;• &lt;b&gt;Checkov / tfsec&lt;/b&gt; (IaC Scan)&lt;br&gt;• `terraform plan -out=tfplan`&lt;br&gt;• Plan posted on Pull Request&lt;br&gt;• Speculative execution preview" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D97706;strokeWidth=1.5;fontColor=#0F172A;fontSize=11;align=left;spacingLeft=12;fontFamily=Segoe UI;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="200" width="190" height="320" as="geometry" />
+        </mxCell>
+
+        <!-- Step 6: Azure Infrastructure Deployment -->
+        <mxCell id="step6_box" value="STEP 6: AZURE DEPLOYMENT" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=1.5;fontColor=#065F46;fontSize=11;fontStyle=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="1315" y="160" width="220" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="step6_card" value="&lt;b&gt;Azure Deployment&lt;/b&gt;&lt;br&gt;&lt;font color='#059669'&gt;Terraform Apply Stage&lt;/font&gt;&lt;br&gt;&lt;br&gt;• `terraform apply tfplan`&lt;br&gt;• Service Connection / SPN&lt;br&gt;• Azure VNet &amp;amp; Subnets&lt;br&gt;• NSG Security Rules&lt;br&gt;• Linux VM &amp;amp; Storage&lt;br&gt;• PostgreSQL Database&lt;br&gt;• Zero manual drift" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#059669;strokeWidth=1.5;fontColor=#0F172A;fontSize=11;align=left;spacingLeft=12;fontFamily=Segoe UI;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="1330" y="200" width="190" height="320" as="geometry" />
+        </mxCell>
+
+        <!-- Connectors between horizontal workflow steps -->
+        <mxCell id="arrow1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#6366F1;strokeWidth=2.5;" edge="1" parent="1" source="step1_card" target="step2_card" />
+        <mxCell id="arrow2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#3B82F6;strokeWidth=2.5;" edge="1" parent="1" source="step2_card" target="step3_card" />
+        <mxCell id="arrow3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#0D9488;strokeWidth=2.5;" edge="1" parent="1" source="step3_card" target="step4_card" />
+        <mxCell id="arrow4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#475569;strokeWidth=2.5;" edge="1" parent="1" source="step4_card" target="step5_card" />
+        <mxCell id="arrow5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#D97706;strokeWidth=2.5;" edge="1" parent="1" source="step5_card" target="step6_card" />
+
+        <!-- Lower Section: Remote State Management & Multi-Env Deployment -->
+        <mxCell id="state_box" value="REMOTE STATE MANAGEMENT (AZURE STORAGE BACKEND)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0078D4;strokeWidth=2;fontColor=#0078D4;fontSize=12;fontStyle=1;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="65" y="570" width="700" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="state_desc" value="&lt;b&gt;Backend Configuration &amp;amp; Locking Mechanism:&lt;/b&gt;&lt;br&gt;&lt;font color='#334155'&gt;• Storage Account: &lt;b&gt;sttfstateprod01&lt;/b&gt; (Resource Group: rg-terraform-state)&lt;br&gt;• Blob Container: &lt;b&gt;tfstate&lt;/b&gt; with state file isolation per environment&lt;br&gt;• State Locking: Native Azure Blob Lease prevents concurrent runs and state corruption&lt;br&gt;• Security: TLS 1.2 minimum, encrypted at rest, private access via RBAC&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#BFDBFE;fontColor=#1E3A8A;fontSize=11;align=left;spacingLeft=15;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="85" y="610" width="660" height="90" as="geometry" />
+        </mxCell>
+        <!-- 3 State Blobs -->
+        <mxCell id="blob_dev" value="&lt;b&gt;dev.terraform.tfstate&lt;/b&gt;&lt;br&gt;Workspace: dev&lt;br&gt;&lt;font color='#059669'&gt;Lease: Available&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#10B981;strokeWidth=1.5;fontColor=#0F172A;fontSize=11;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="85" y="720" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="blob_stage" value="&lt;b&gt;stage.terraform.tfstate&lt;/b&gt;&lt;br&gt;Workspace: stage&lt;br&gt;&lt;font color='#059669'&gt;Lease: Available&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#0284C7;strokeWidth=1.5;fontColor=#0F172A;fontSize=11;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="315" y="720" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="blob_prod" value="&lt;b&gt;prod.terraform.tfstate&lt;/b&gt;&lt;br&gt;Workspace: prod&lt;br&gt;&lt;font color='#DC2626'&gt;Lease: Protected / Locked&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#DC2626;strokeWidth=1.5;fontColor=#0F172A;fontSize=11;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="545" y="720" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="state_footer" value="State Outputs dynamically consumed by application deployment pipelines (e.g. VNet IDs, Private IPs, DB Endpoints)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#CBD5E1;fontColor=#475569;fontSize=11;align=center;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="85" y="810" width="660" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Lower Right Section: Multi-Environment Promotion -->
+        <mxCell id="env_box" value="MULTI-ENVIRONMENT PROMOTION &amp;amp; GOVERNANCE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#10B981;strokeWidth=2;fontColor=#059669;fontSize=12;fontStyle=1;align=left;verticalAlign=top;spacingLeft=15;spacingTop=10;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="800" y="570" width="735" height="360" as="geometry" />
+        </mxCell>
+        <!-- Dev Card -->
+        <mxCell id="env_dev" value="&lt;b&gt;DEV ENVIRONMENT&lt;/b&gt;&lt;br&gt;Subscription: sub-telecom-dev&lt;br&gt;&lt;font color='#059669'&gt;• Automated Trigger on PR Merge&lt;br&gt;• Cost-optimized sizing (Standard_B2s)&lt;br&gt;• Single-node PostgreSQL flexible&lt;br&gt;• Fast iteration &amp;amp; developer testing&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0FDF4;strokeColor=#10B981;strokeWidth=1.5;fontColor=#064E3B;fontSize=11;align=left;spacingLeft=12;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="825" y="610" width="685" height="75" as="geometry" />
+        </mxCell>
+        <!-- Stage Card -->
+        <mxCell id="env_stage" value="&lt;b&gt;STAGE (PRE-PROD) ENVIRONMENT&lt;/b&gt;&lt;br&gt;Subscription: sub-telecom-stage&lt;br&gt;&lt;font color='#0284C7'&gt;• Mirror configuration to Production&lt;br&gt;• Production-like network isolation&lt;br&gt;• End-to-end integration &amp;amp; performance testing&lt;br&gt;• Automated validation suite before sign-off&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0F9FF;strokeColor=#0284C7;strokeWidth=1.5;fontColor=#0C4A6E;fontSize=11;align=left;spacingLeft=12;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="825" y="700" width="685" height="75" as="geometry" />
+        </mxCell>
+        <!-- Prod Card -->
+        <mxCell id="env_prod" value="&lt;b&gt;PRODUCTION ENVIRONMENT&lt;/b&gt;&lt;br&gt;Subscription: sub-telecom-prod&lt;br&gt;&lt;font color='#B45309'&gt;• Strict RBAC (Reader-only access for engineers)&lt;br&gt;• Mandatory Change Advisory &amp;amp; Manual Approval Gate&lt;br&gt;• Zone-redundant high availability &amp;amp; automated backup&lt;br&gt;• Full audit trail in Azure Monitor &amp;amp; Git history&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#F59E0B;strokeWidth=1.5;fontColor=#78350F;fontSize=11;align=left;spacingLeft=12;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="825" y="790" width="685" height="75" as="geometry" />
+        </mxCell>
+
+        <!-- Upward connection from State to Plan -->
+        <mxCell id="conn_state_plan" value="State Sync &amp;amp; Locking" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#0078D4;strokeWidth=1.5;dashed=1;fontColor=#0078D4;fontSize=10;fontStyle=1;" edge="1" parent="1" source="state_box" target="step5_card">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
