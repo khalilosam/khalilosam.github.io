@@ -17,7 +17,7 @@ Live URL: **[https://khalilosam.github.io/](https://khalilosam.github.io/)**
 - **Premium UI/UX:** Dark obsidian navy (`#060b14`), modern Azure blue (`#0078d4`), and sky cyan highlights designed for recruiters, engineering managers, and cloud architects.
 - **Hero & Executive Summary:** Highlights 11+ years in IT & Telecom and 6 years specializing in Azure DevOps and Linux platform engineering.
 - **Skills Matrix:** Categorized, interactive filterable toolchain covering Cloud & IaC, CI/CD, DevSecOps, and Linux/Telecom.
-- **Career Timeline:** Details roles from field telecommunications across Africa (Airtel/Huawei in Zambia, Kenya, Malawi, Namibia) to Ericsson and **Edexcel Global India**.
+- **Career Timeline:** Details roles from field telecommunications across Africa (Airtel/Huawei in Zambia, Kenya, Malawi, Namibia) to **Ericsson Global India**.
 - **Featured Projects Showcase:** Direct GitHub integration with live links to:
   - [`telecom-nms-azure-platform`](https://github.com/khalilosam/telecom-nms-azure-platform)
   - [`terraform-azure-enterprise-modules`](https://github.com/khalilosam/terraform-azure-enterprise-modules)
@@ -87,7 +87,7 @@ Because this repository is named `khalilosam.github.io`, GitHub automatically tr
 
 **Osama Khalil**
 - **Role:** Senior DevOps Engineer & Azure Cloud Architect
-- **Company:** Edexcel Global India
+- **Company:** Ericsson Global India
 - **GitHub:** [@khalilosam](https://github.com/khalilosam)
 - **Email:** [khalil.osama91@gmail.com](mailto:khalil.osama91@gmail.com)
 - **Phone:** +91-9430088343

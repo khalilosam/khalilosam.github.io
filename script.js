@@ -148,18 +148,25 @@ window.switchArchTab = function(tabId) {
 };
 
 /* ==============================================================================
-   6. LIGHTBOX MODAL CONTROLLER
+   6. ADVANCED LIGHTBOX MODAL CONTROLLER (ZOOM & FULLSCREEN)
    ============================================================================== */
+let currentZoom = 1.0;
+
 window.openLightbox = function(imageSrc, titleText) {
   const modal = document.getElementById('lightbox-modal');
   const img = document.getElementById('lightbox-img');
   const title = document.getElementById('lightbox-title');
   const downloadLink = document.getElementById('lightbox-download-link');
+  const dialog = document.getElementById('lightbox-dialog');
 
   if (!modal || !img) return;
 
   img.src = imageSrc;
   img.alt = titleText || 'Technical Diagram';
+  currentZoom = 1.0;
+  applyZoom();
+
+  if (dialog) dialog.classList.remove('fullscreen');
   if (title) title.innerText = titleText || 'Technical Architecture Diagram';
   if (downloadLink) {
     downloadLink.href = imageSrc;
@@ -178,7 +185,44 @@ window.closeLightbox = function() {
   modal.classList.remove('active');
   modal.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = ''; // Unlock scroll
+  currentZoom = 1.0;
+  applyZoom();
 };
+
+window.zoomIn = function() {
+  if (currentZoom < 3.0) {
+    currentZoom += 0.25;
+    applyZoom();
+  }
+};
+
+window.zoomOut = function() {
+  if (currentZoom > 0.6) {
+    currentZoom -= 0.25;
+    applyZoom();
+  }
+};
+
+window.resetZoom = function() {
+  currentZoom = 1.0;
+  applyZoom();
+};
+
+window.toggleFullscreen = function() {
+  const dialog = document.getElementById('lightbox-dialog');
+  if (dialog) {
+    dialog.classList.toggle('fullscreen');
+  }
+};
+
+function applyZoom() {
+  const img = document.getElementById('lightbox-img');
+  if (img) {
+    img.style.transform = `scale(${currentZoom})`;
+    img.style.transition = 'transform 0.2s cubic-bezier(0.16, 1, 0.3, 1)';
+    img.style.transformOrigin = 'center center';
+  }
+}
 
 function initKeyboardListeners() {
   document.addEventListener('keydown', (e) => {
