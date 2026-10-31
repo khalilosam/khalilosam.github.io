@@ -89,5 +89,6 @@ Because this repository is named `khalilosam.github.io`, GitHub automatically tr
 - **Role:** Senior DevOps Engineer & Azure Cloud Architect
 - **Company:** Ericsson Global India
 - **GitHub:** [@khalilosam](https://github.com/khalilosam)
+- **LinkedIn:** [linkedin.com/in/osama-khalil-20525227](https://www.linkedin.com/in/osama-khalil-20525227/)
 - **Email:** [khalil.osama91@gmail.com](mailto:khalil.osama91@gmail.com)
 - **Phone:** +91-9430088343
