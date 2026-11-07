@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Happy Diwali | Festive Wishes from Osama Khalil</title>
+  <meta name="description" content="A warm, elegant Diwali greeting celebrating light, hope, peace, and universal humanity. Crafted with warmth and positivity by Osama Khalil.">
+  <meta name="author" content="Osama Khalil">
+  <meta name="theme-color" content="#070b19">
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://khalilosam.github.io/diwali-wishes/">
+  <meta property="og:title" content="शुभ दीपावली | Diwali Greetings from Osama Khalil">
+  <meta property="og:description" content="“Different traditions, one beautiful humanity. May your life always shine with happiness, kindness, and endless possibilities.” — Osama Khalil">
+  <meta property="og:image" content="./assets/og-image.svg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="शुभ दीपावली | Festive Greetings from Osama Khalil">
+  <meta name="twitter:description" content="Celebrate the festival of lights with warmth, positivity, and shared humanity.">
+  <meta name="twitter:image" content="./assets/og-image.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Great+Vibes&family=Outfit:wght@300;400;500;600;700&family=Rozha+One&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <!-- Canvas Layer: Ambient Floating Gold Particles and Festive Fireworks -->
+  <canvas id="particleCanvas" class="canvas-layer" aria-hidden="true"></canvas>
+
+  <!-- Ambient Golden Vignette & Mandala Background -->
+  <div class="ambient-glow" aria-hidden="true"></div>
+  <div class="mandala-bg" aria-hidden="true"></div>
+
+  <!-- Hanging Decorative Lanterns (Left & Right) -->
+  <aside class="lantern-wrapper lantern-left" aria-hidden="true">
+    <div class="lantern-string"></div>
+    <div class="lantern-body">
+      <div class="lantern-top"></div>
+      <div class="lantern-glass">
+        <span class="lantern-flame"></span>
+      </div>
+      <div class="lantern-tassels">
+        <i></i><i></i><i></i>
+      </div>
+    </div>
+  </aside>
+
+  <aside class="lantern-wrapper lantern-right" aria-hidden="true">
+    <div class="lantern-string"></div>
+    <div class="lantern-body">
+      <div class="lantern-top"></div>
+      <div class="lantern-glass">
+        <span class="lantern-flame"></span>
+      </div>
+      <div class="lantern-tassels">
+        <i></i><i></i><i></i>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Navigation / Top Controls Bar -->
+  <header class="top-nav">
+    <div class="nav-container">
+      <a href="#hero" class="brand-badge" aria-label="Osama Khalil Diwali Greeting Home">
+        <span class="diya-bullet" aria-hidden="true">🪔</span>
+        <span class="brand-text">
+          <strong class="brand-name">Osama Khalil</strong>
+          <span class="brand-sub">Diwali ✦ Festive Wishes</span>
+        </span>
+      </a>
+
+      <div class="nav-actions">
+        <!-- Sound Toggle Button -->
+        <button id="soundToggleBtn" class="pill-btn sound-btn" aria-label="Toggle ambient festive soundscape" aria-pressed="false" title="Toggle ambient music">
+          <span class="sound-icon" aria-hidden="true">
+            <svg class="icon-sound-off" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <line x1="23" y1="9" x2="17" y2="15"></line>
+              <line x1="17" y1="9" x2="23" y2="15"></line>
+            </svg>
+            <svg class="icon-sound-on" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+            </svg>
+          </span>
+          <span class="sound-label">Music: <strong class="sound-status-text">OFF</strong></span>
+          <span class="sound-bars" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+        </button>
+
+        <!-- Quick Light Button in Header -->
+        <a href="#ceremony" class="pill-btn pill-highlight" id="navLightLink">
+          <span class="spark-dot" aria-hidden="true"></span>
+          <span>Light a Diya</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Flow -->
+  <main id="main-content" class="content-wrapper">
+
+    <!-- Personalized Recipient Banner (Shown when ?to=Name is provided) -->
+    <div id="personalizedBanner" class="personalized-banner" role="status" style="display: none;">
+      <div class="banner-inner">
+        <span class="banner-sparkle">✦</span>
+        <span>A warm, personalized festive greeting for <strong id="recipientNameDisplay">you</strong></span>
+        <span class="banner-sparkle">✦</span>
+      </div>
+    </div>
+
+    <!-- 1. HERO SECTION -->
+    <section id="hero" class="hero-section" aria-labelledby="hero-greeting">
+      <div class="hero-content">
+
+        <!-- Top Festive Tag -->
+        <div class="festive-tag-pill" data-reveal>
+          <span class="star-icon">✦</span>
+          <span>FESTIVAL OF LIGHTS, PEACE &amp; TOGETHERNESS</span>
+          <span class="star-icon">✦</span>
+        </div>
+
+        <!-- Devanagari Greeting Headline -->
+        <h1 id="hero-greeting" class="devanagari-title shimmer-text" data-reveal>
+          शुभ दीपावली
+        </h1>
+
+        <!-- English Sub-Greeting -->
+        <p class="english-title" data-reveal>
+          Happy Diwali &amp; Joyous New Beginnings
+        </p>
+
+        <!-- Core Festive Wish Quote -->
+        <div class="main-wish-card" data-reveal>
+          <div class="card-ornament top-ornament" aria-hidden="true">❦ ✤ ❦</div>
+          <p class="main-wish-text">
+            “May the light of Diwali bring <em>happiness</em>, <em>peace</em>, <em>prosperity</em>, and <em>new beginnings</em> into your life.”
+          </p>
+          <div class="card-ornament bottom-ornament" aria-hidden="true">❦ ✤ ❦</div>
+        </div>
+
+        <!-- Personalized Signature -->
+        <div class="hero-signature" data-reveal>
+          <span class="signature-prefix">Warm wishes,</span>
+          <div class="signature-name-wrap">
+            <span class="signature-calligraphy">Osama Khalil</span>
+          </div>
+          <span class="signature-badge">Professional &amp; Personal Connections</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. INTERACTIVE CEREMONIAL DIYA SECTION -->
+    <section id="ceremony" class="ceremony-section" aria-label="Interactive Diya Lighting Ceremony">
+      <div class="ceremony-card" data-reveal>
+        <div class="section-kicker">INTERACTIVE EXPERIENCE</div>
+        <h2 class="ceremony-title">Kindle the Flame of Goodwill</h2>
+        <p class="ceremony-sub">
+          Click below or tap the diya to light an auspicious flame. Spread positivity across boundaries.
+        </p>
+
+        <!-- Central SVG Diya Artwork -->
+        <div class="diya-stage" id="diyaStage" role="button" tabindex="0" aria-label="Click to light the Diya" aria-pressed="false">
+          <!-- Light Aura Effect (expands when lit) -->
+          <div class="diya-aura" id="diyaAura" aria-hidden="true"></div>
+          
+          <!-- Radiating Light Rings -->
+          <div class="light-ring ring-1" aria-hidden="true"></div>
+          <div class="light-ring ring-2" aria-hidden="true"></div>
+
+          <!-- SVG Diya Graphic -->
+          <svg class="diya-svg" viewBox="0 0 320 220" width="300" height="206" aria-hidden="true">
+            <defs>
+              <!-- Flame Gradients -->
+              <radialGradient id="flameOuterGrad" cx="50%" cy="80%" r="75%">
+                <stop offset="0%" stop-color="#FFF2A3" />
+                <stop offset="25%" stop-color="#FFD700" />
+                <stop offset="55%" stop-color="#FF7A18" />
+                <stop offset="85%" stop-color="#FF3800" />
+                <stop offset="100%" stop-color="#800C00" stop-opacity="0.1" />
+              </radialGradient>
+              <radialGradient id="flameInnerGrad" cx="50%" cy="70%" r="50%">
+                <stop offset="0%" stop-color="#FFFFFF" />
+                <stop offset="45%" stop-color="#FFF7C2" />
+                <stop offset="85%" stop-color="#FFBA08" />
+                <stop offset="100%" stop-color="#FF5722" />
+              </radialGradient>
+              <radialGradient id="flameBaseBlue" cx="50%" cy="90%" r="40%">
+                <stop offset="0%" stop-color="#72C8FF" stop-opacity="0.9" />
+                <stop offset="80%" stop-color="#0066FF" stop-opacity="0.4" />
+                <stop offset="100%" stop-color="#002699" stop-opacity="0" />
+              </radialGradient>
+
+              <!-- Diya Body Gradients -->
+              <linearGradient id="brassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFEAA7" />
+                <stop offset="25%" stop-color="#F1C40F" />
+                <stop offset="60%" stop-color="#D4AF37" />
+                <stop offset="85%" stop-color="#996515" />
+                <stop offset="100%" stop-color="#4D330A" />
+              </linearGradient>
+
+              <linearGradient id="rimGrad" x1="0%" y1="50%" x2="100%" y2="50%">
+                <stop offset="0%" stop-color="#FFF5C2" />
+                <stop offset="50%" stop-color="#FFD700" />
+                <stop offset="100%" stop-color="#B8860B" />
+              </linearGradient>
+
+              <linearGradient id="terracottaShade" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#3D1C06" />
+                <stop offset="100%" stop-color="#1A0B02" />
+              </linearGradient>
+
+              <!-- Glow Filter -->
+              <filter id="flameGlowFilter" x="-40%" y="-40%" width="180%" height="180%">
+                <feGaussianBlur stdDeviation="8" result="blur1" />
+                <feGaussianBlur stdDeviation="16" result="blur2" />
+                <feMerge>
+                  <feMergeNode in="blur2" />
+                  <feMergeNode in="blur1" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+
+            <!-- Shadow on ground -->
+            <ellipse cx="160" cy="196" rx="90" ry="14" fill="#000000" opacity="0.6" />
+
+            <!-- Stand Base -->
+            <path d="M125 178 L115 194 L205 194 L195 178 Z" fill="url(#brassGrad)" />
+            <ellipse cx="160" cy="194" rx="45" ry="6" fill="#D4AF37" />
+
+            <!-- Main Diya Bowl -->
+            <path d="M50 120 C60 168, 115 188, 160 188 C205 188, 260 168, 270 120 C235 130, 195 135, 160 135 C125 135, 85 130, 50 120 Z" fill="url(#brassGrad)" stroke="#7A5210" stroke-width="1.5" />
+
+            <!-- Intricate Etched Filigree Pattern on Diya Bowl -->
+            <g stroke="#FFF0A0" stroke-width="1" opacity="0.45" fill="none">
+              <path d="M80 135 Q120 165 160 165 Q200 165 240 135" />
+              <path d="M95 145 Q125 173 160 173 Q195 173 225 145" />
+              <circle cx="160" cy="154" r="3.5" fill="#FFEAA7" />
+              <circle cx="130" cy="148" r="2.5" fill="#FFEAA7" />
+              <circle cx="190" cy="148" r="2.5" fill="#FFEAA7" />
+              <circle cx="106" cy="140" r="2" fill="#FFEAA7" />
+              <circle cx="214" cy="140" r="2" fill="#FFEAA7" />
+            </g>
+
+            <!-- Diya Rim and Oil Pool -->
+            <ellipse cx="160" cy="120" rx="110" ry="16" fill="url(#rimGrad)" stroke="#66460C" stroke-width="1.5" />
+            <ellipse cx="160" cy="121" rx="95" ry="11" fill="url(#terracottaShade)" />
+            <ellipse cx="160" cy="123" rx="80" ry="8" fill="#542B0D" opacity="0.8" />
+
+            <!-- Wick / Cotton Batti -->
+            <path d="M160 122 Q160 102 160 92" stroke="#2B1505" stroke-width="4.5" stroke-linecap="round" fill="none" />
+            <circle cx="160" cy="91" r="2" fill="#FFA500" />
+
+            <!-- FLAME GROUP (Toggled by state) -->
+            <g id="diyaFlameGroup" class="flame-group unlit" filter="url(#flameGlowFilter)">
+              <!-- Outer Dancing Flame -->
+              <path class="flame-outer" d="M160 14 C160 14, 118 64, 118 88 C118 108, 136 122, 160 122 C184 122, 202 108, 202 88 C202 64, 160 14, 160 14 Z" fill="url(#flameOuterGrad)" />
+              
+              <!-- Inner Bright Core -->
+              <path class="flame-inner" d="M160 38 C160 38, 134 74, 134 92 C134 106, 146 116, 160 116 C174 116, 186 106, 186 92 C186 74, 160 38, 160 38 Z" fill="url(#flameInnerGrad)" />
+              
+              <!-- Blue Cool Base of Flame -->
+              <path class="flame-blue-base" d="M148 108 C148 108, 142 118, 160 122 C178 118, 172 108, 172 108 Z" fill="url(#flameBaseBlue)" />
+              
+              <!-- Sparkling Flame Tip -->
+              <circle class="flame-tip-glow" cx="160" cy="18" r="4" fill="#FFFFFF" opacity="0.9" />
+            </g>
+
+            <!-- Ember Glow when Unlit -->
+            <g id="emberGlow" class="ember-glow">
+              <circle cx="160" cy="91" r="4" fill="#FF5722" />
+              <circle cx="160" cy="91" r="2" fill="#FFE57F" />
+            </g>
+          </svg>
+        </div>
+
+        <!-- Status Message & Interactive Button Controls -->
+        <div class="ceremony-controls">
+          <button id="lightDiyaBtn" class="cta-primary-btn" aria-label="Light the Diya flame">
+            <span class="btn-icon" aria-hidden="true">🪔</span>
+            <span class="btn-text" id="lightDiyaBtnText">Light the Diya</span>
+            <span class="btn-flare" aria-hidden="true"></span>
+          </button>
+
+          <p id="ceremonyStatusMsg" class="ceremony-status-msg" aria-live="polite">
+            Click to kindle the flame of unity &amp; light up this card.
+          </p>
+
+          <!-- Flame Counter -->
+          <div class="flame-counter-tag">
+            <span class="counter-icon" aria-hidden="true">✨</span>
+            <span id="flameCounterText">Flames of peace lit: <strong id="flameCountDisplay">1</strong></span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. THE UNIVERSAL HUMANITY MESSAGE (THE HEART OF THE CARD) -->
+    <section id="humanity-quote" class="humanity-section" aria-labelledby="humanity-heading">
+      <div class="humanity-card" data-reveal>
+        
+        <div class="card-corner corner-tl" aria-hidden="true"></div>
+        <div class="card-corner corner-tr" aria-hidden="true"></div>
+        <div class="card-corner corner-bl" aria-hidden="true"></div>
+        <div class="card-corner corner-br" aria-hidden="true"></div>
+
+        <div class="quote-header">
+          <span class="quote-icon-badge" aria-hidden="true">❝</span>
+          <span class="quote-category">REFLECTIONS ON UNITY &amp; POSITIVITY</span>
+        </div>
+
+        <!-- The Special Required Quote -->
+        <blockquote class="featured-quote">
+          <p>“Different traditions, one beautiful humanity. May your life always shine with happiness, kindness, and endless possibilities.”</p>
+        </blockquote>
+
+        <div class="quote-divider" aria-hidden="true">
+          <span>❖</span>
+        </div>
+
+        <!-- The Deep Personal Message by Osama Khalil -->
+        <div class="humanity-narrative">
+          <h3 id="humanity-heading" class="narrative-title">Light Belongs to Every Soul</h3>
+          
+          <p class="narrative-paragraph">
+            While each of our traditions carries its own rich history and distinct colors, the essence of light knows no boundaries. A flame does not inquire who kindles it—it generously dispels darkness, radiates warmth, and illuminates the path ahead for everyone alike.
+          </p>
+
+          <p class="narrative-paragraph">
+            I celebrate this festival with deep respect for its universal virtues: <strong>humanity comes first</strong>, kindness transcends differences, and the hope for renewed beginnings, peace, and prosperity belongs to all of us.
+          </p>
+
+          <p class="narrative-paragraph">
+            May this season inspire genuine fellowship across our teams, communities, and families. Here is wishing you, your colleagues, and your loved ones limitless joy, good health, and flourishing success.
+          </p>
+        </div>
+
+        <!-- Closing Signature Block -->
+        <div class="narrative-signature-block">
+          <div class="signature-line-left" aria-hidden="true"></div>
+          <div class="signature-details">
+            <span class="signature-salutation">With heartfelt warmth &amp; respect,</span>
+            <span class="signature-author">Osama Khalil</span>
+          </div>
+          <div class="signature-line-right" aria-hidden="true"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. FOUR PILLARS OF LIGHT (INTERACTIVE WISH DIYAS) -->
+    <section id="pillars" class="pillars-section" aria-label="Four Universal Pillars of Light">
+      <div class="section-intro" data-reveal>
+        <span class="intro-pill">FOUR PILLARS OF LIGHT</span>
+        <h2 class="section-title">Kindle Blessings for All</h2>
+        <p class="section-subtitle">Click each diya to illuminate a core human virtue for this season.</p>
+      </div>
+
+      <div class="pillars-grid">
+        <!-- Pillar 1: Peace -->
+        <article class="pillar-card active" data-pillar="peace" data-reveal tabindex="0">
+          <div class="pillar-glow" aria-hidden="true"></div>
+          <div class="pillar-header">
+            <span class="pillar-flame-icon" aria-hidden="true">🪔</span>
+            <span class="pillar-script">शांति</span>
+          </div>
+          <h3 class="pillar-name">Light of Peace</h3>
+          <p class="pillar-desc">
+            May calmness find a home in your mind, harmony dwell in your heart, and tranquil moments accompany your daily walk.
+          </p>
+          <div class="pillar-action-tag">Illuminated ✦</div>
+        </article>
+
+        <!-- Pillar 2: Kindness -->
+        <article class="pillar-card active" data-pillar="kindness" data-reveal tabindex="0">
+          <div class="pillar-glow" aria-hidden="true"></div>
+          <div class="pillar-header">
+            <span class="pillar-flame-icon" aria-hidden="true">🪔</span>
+            <span class="pillar-script">सद्भाव</span>
+          </div>
+          <h3 class="pillar-name">Light of Kindness</h3>
+          <p class="pillar-desc">
+            May empathy guide our conversations, compassion dissolve divisions, and gentle generosity uplift those around us.
+          </p>
+          <div class="pillar-action-tag">Illuminated ✦</div>
+        </article>
+
+        <!-- Pillar 3: Prosperity -->
+        <article class="pillar-card active" data-pillar="prosperity" data-reveal tabindex="0">
+          <div class="pillar-glow" aria-hidden="true"></div>
+          <div class="pillar-header">
+            <span class="pillar-flame-icon" aria-hidden="true">🪔</span>
+            <span class="pillar-script">समृद्धि</span>
+          </div>
+          <h3 class="pillar-name">Light of Prosperity</h3>
+          <p class="pillar-desc">
+            May your honorable efforts bear bountiful fruit, opening doors to new growth, professional success, and enduring stability.
+          </p>
+          <div class="pillar-action-tag">Illuminated ✦</div>
+        </article>
+
+        <!-- Pillar 4: Hope -->
+        <article class="pillar-card active" data-pillar="hope" data-reveal tabindex="0">
+          <div class="pillar-glow" aria-hidden="true"></div>
+          <div class="pillar-header">
+            <span class="pillar-flame-icon" aria-hidden="true">🪔</span>
+            <span class="pillar-script">आशा</span>
+          </div>
+          <h3 class="pillar-name">Light of Hope</h3>
+          <p class="pillar-desc">
+            May courage guide you through life's uncertainties, reminding you that dawn always breaks through the darkest night.
+          </p>
+          <div class="pillar-action-tag">Illuminated ✦</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5. PERSONALIZED CARD CREATOR & SHARING STUDIO -->
+    <section id="share-studio" class="share-section" aria-labelledby="share-heading">
+      <div class="share-card" data-reveal>
+        <span class="share-pill">SHARE THE CELEBRATION</span>
+        <h2 id="share-heading" class="share-title">Personalize &amp; Share Wishes</h2>
+        <p class="share-sub">
+          Generate a custom link with your recipient's name to share this digital greeting with friends, family, or colleagues.
+        </p>
+
+        <!-- Dynamic Greeting Customizer Form -->
+        <div class="customizer-box">
+          <label for="recipientInput" class="customizer-label">Recipient's Name or Group:</label>
+          <div class="input-action-row">
+            <div class="input-wrap">
+              <span class="input-icon" aria-hidden="true">✉</span>
+              <input type="text" id="recipientInput" class="custom-input" placeholder="e.g. Rahul, Priya, Engineering Team, Valued Partner..." maxlength="40" autocomplete="off">
+            </div>
+            <button id="applyNameBtn" class="pill-btn apply-btn">Update Card</button>
+          </div>
+
+          <!-- Quick presets -->
+          <div class="preset-pills">
+            <span class="preset-label">Quick select:</span>
+            <button class="preset-btn" data-preset="Dear Friend">Dear Friend</button>
+            <button class="preset-btn" data-preset="Wonderful Colleagues">Colleagues</button>
+            <button class="preset-btn" data-preset="Beloved Family">Family</button>
+            <button class="preset-btn" data-preset="Valued Partner">Valued Partner</button>
+          </div>
+        </div>
+
+        <!-- Real-time Live Preview Card -->
+        <div class="preview-card-frame" id="sharePreviewCard">
+          <div class="preview-inner">
+            <span class="preview-tag">DIGITAL GREETING CARD</span>
+            <div class="preview-salutation" id="previewSalutation">To Everyone Celebrating,</div>
+            <div class="preview-hindi">शुभ दीपावली ✦ Happy Diwali</div>
+            <p class="preview-text">
+              “Different traditions, one beautiful humanity. May your life always shine with happiness, kindness, and endless possibilities.”
+            </p>
+            <div class="preview-sig">
+              <span>Warm wishes,</span>
+              <strong>Osama Khalil</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Share Buttons Bar -->
+        <div class="share-actions-row">
+          <!-- Primary Native Share Button -->
+          <button id="mainShareBtn" class="cta-primary-btn share-trigger-btn" aria-label="Share wishes via native menu or options">
+            <span class="btn-icon" aria-hidden="true">↗</span>
+            <span>Share Wishes</span>
+            <span class="btn-flare" aria-hidden="true"></span>
+          </button>
+
+          <!-- Direct Copy Link Button -->
+          <button id="copyLinkBtn" class="pill-btn copy-btn" aria-label="Copy greeting link to clipboard">
+            <svg class="copy-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span id="copyBtnText">Copy Shareable Link</span>
+          </button>
+        </div>
+
+        <!-- Social Quick Share Icons -->
+        <div class="social-share-links">
+          <span class="social-share-label">Or share directly via:</span>
+          <div class="social-icon-row">
+            <a id="shareWhatsapp" href="#" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp-btn" aria-label="Share on WhatsApp">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.05 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              <span>WhatsApp</span>
+            </a>
+
+            <a id="shareLinkedin" href="#" target="_blank" rel="noopener noreferrer" class="social-btn linkedin-btn" aria-label="Share on LinkedIn">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+
+            <a id="shareTwitter" href="#" target="_blank" rel="noopener noreferrer" class="social-btn x-btn" aria-label="Share on X (Twitter)">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+              <span>X / Twitter</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 6. FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-symbol" aria-hidden="true">✦ 🪔 ✦</div>
+      
+      <p class="footer-craft-line">
+        Crafted with warmth &amp; positivity by <strong class="footer-author">Osama Khalil</strong>
+      </p>
+
+      <div class="footer-social">
+        <a href="https://github.com/khalilosam" target="_blank" rel="noopener noreferrer" class="github-badge" aria-label="Visit Osama Khalil's GitHub profile">
+          <svg class="github-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>github.com/khalilosam</span>
+        </a>
+      </div>
+
+      <p class="footer-footnote">
+        Celebrating peace, light &amp; humanity &bull; Single-page digital greeting &bull; Hosted on GitHub Pages
+      </p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Notification Popup -->
+  <div id="toastNotification" class="toast-popup" role="status" aria-live="polite">
+    <span class="toast-icon" id="toastIcon">✨</span>
+    <span class="toast-msg" id="toastMsg">Link copied to clipboard!</span>
+  </div>
+
+  <!-- Audio and Main Interaction Scripts -->
+  <script src="./script.js"></script>
+</body>
+</html>
